@@ -82,9 +82,7 @@ def predict():
                     "code": 200,
                     "message": "Prediction successful"
                 },
-                "data": {
-                    "prediction": y_pred_labels
-                }
+                "prediction": y_pred_labels
             })
         except Exception as e:
             return jsonify({

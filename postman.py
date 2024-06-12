@@ -22,5 +22,14 @@ data = {
 # Send the POST request
 response = requests.post(url, json=data)
 
-# Print the response
-print(response.json())
+# Print the response status and text for debugging
+print("Status Code:", response.status_code)
+print("Response Headers:", response.headers)
+print("Response Text:", response.text)
+
+try:
+    # Try to parse the JSON response
+    response_json = response.json()
+    print("JSON Response:", response_json)
+except requests.exceptions.JSONDecodeError:
+    print("Failed to parse response as JSON.")
