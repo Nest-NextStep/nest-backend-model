@@ -1,7 +1,7 @@
 import requests
 
 # Define the URL of your Flask app
-url = "http://127.0.0.1:5000/predict"
+url = "https://nest-backend-model-yo7utis4aa-et.a.run.app/predict"
 
 # Define the JSON data to send
 data = {
