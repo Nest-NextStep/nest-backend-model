@@ -5,7 +5,7 @@ from flask import Flask, jsonify, request
 from tensorflow.keras.models import load_model
 
 app = Flask(__name__)
-model = load_model("my_model.h5", compile=False)
+model = load_model("model_2.h5", compile=False)
 
 labels = {
     0: 'Administrasi Bisnis',
@@ -153,4 +153,5 @@ def predict():
 
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 8080)), debug=True)
+    # app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 8080)), debug=True)
+    app.run(debug=True)
