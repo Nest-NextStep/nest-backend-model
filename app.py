@@ -88,7 +88,7 @@ def predict():
             # Ensure all required features are in the input data
             required_features = R_features + I_features + A_features + S_features + E_features + C_features + [
                 'TIPI1', 'TIPI2', 'TIPI3', 'TIPI4', 'TIPI5', 'TIPI6', 'TIPI7', 'TIPI8', 'TIPI9', 'TIPI10',
-                'VCL1', 'VCL2', 'VCL3', 'VCL4', 'VCL5', 'VCL6', 'VCL7', 'VCL8', 'VCL9', 'VCL10', 'VCL11', 'VCL12', 'VCL13', 'VCL14', 'VCL15',
+                'VCL1', 'VCL2', 'VCL3', 'VCL4', 'VCL5', 'VCL6', 'VCL10', 'VCL11', 'VCL12', 'VCL13', 'VCL14', 'VCL15',
                 'education', 'gender', 'engnat', 'religion', 'voted'
             ]
 
@@ -116,7 +116,7 @@ def predict():
             # Select the final 37 features
             final_features = ['R', 'I', 'A', 'S', 'E', 'C'] + [
                 'TIPI1', 'TIPI2', 'TIPI3', 'TIPI4', 'TIPI5', 'TIPI6', 'TIPI7', 'TIPI8', 'TIPI9', 'TIPI10',
-                'VCL1', 'VCL2', 'VCL3', 'VCL4', 'VCL5', 'VCL6', 'VCL7', 'VCL8', 'VCL9', 'VCL10', 'VCL11', 'VCL12', 'VCL13', 'VCL14', 'VCL15',
+                'VCL1', 'VCL2', 'VCL3', 'VCL4', 'VCL5', 'VCL6', 'VCL10', 'VCL11', 'VCL12', 'VCL13', 'VCL14', 'VCL15',
                 'education', 'gender', 'engnat', 'religion', 'voted'
             ]
             input_data = df[final_features].values
