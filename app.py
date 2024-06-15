@@ -8,7 +8,56 @@ app = Flask(__name__)
 model = load_model("my_model.h5", compile=False)
 
 labels = {
-    0: 'administrasi bisnis', 1: 'akuntansi', 2: 'antropologi', 3: 'arsitektur', 4: 'bimbingan konseling', 5: 'biologi', 6: 'desain grafis', 7: 'digital bisnis', 8: 'ekonomi', 9: 'farmasi', 10: 'filsafat', 11: 'fisika', 12: 'geografi', 13: 'hubungan internasional', 14: 'hukum', 15: 'ilmu kesejahteraan sosial', 16: 'ilmu komunikasi', 17: 'ilmu politik', 18: 'jurnalistik', 19: 'kedoketeran', 20: 'keperawatan', 21: 'kesehatan masyarakat', 22: 'kimia', 23: 'kriminologi', 24: 'linguistik', 25: 'manajemen', 26: 'manajemen bisnis', 27: 'manajemen sumber daya manusia', 28: 'marketing', 29: 'matematika', 30: 'musik', 31: 'pariwisata', 32: 'pendidikan olahraga', 33: 'pg paud', 34: 'psikologi', 35: 'sastra inggris', 36: 'sejarah', 37: 'seni rupa', 38: 'sosiologi', 39: 'teknik biomedik', 40: 'teknik elektro', 41: 'teknik elektronika', 42: 'teknik industri', 43: 'teknik informatika', 44: 'teknik kimia', 45: 'teknik komputer', 46: 'teknik lingkungan', 47: 'teknik mesin', 48: 'teknik sipil', 49: 'teknologi informasi'
+    0: 'Administrasi Bisnis',
+    1: 'Akuntansi',
+    2: 'Antropologi',
+    3: 'Arsitektur',
+    4: 'Bimbingan Konseling',
+    5: 'Biologi',
+    6: 'Desain Grafis',
+    7: 'Digital Bisnis',
+    8: 'Ekonomi',
+    9: 'Farmasi',
+    10: 'Filsafat',
+    11: 'Fisika',
+    12: 'Geografi',
+    13: 'Hubungan Internasional',
+    14: 'Hukum',
+    15: 'Ilmu Kesejahteraan Sosial',
+    16: 'Ilmu Komunikasi',
+    17: 'Ilmu Politik',
+    18: 'Jurnalistik',
+    19: 'Kedokteran',
+    20: 'Keperawatan',
+    21: 'Kesehatan Masyarakat',
+    22: 'Kimia',
+    23: 'Kriminologi',
+    24: 'Linguistik',
+    25: 'Manajemen',
+    26: 'Manajemen Bisnis',
+    27: 'Hubungan Masyarakat',
+    28: 'Marketing',
+    29: 'Matematika',
+    30: 'Musik',
+    31: 'Pariwisata',
+    32: 'Pendidikan Olahraga',
+    33: 'Pendidikan Anak Usia Dini',
+    34: 'Psikologi',
+    35: 'Sastra Inggris',
+    36: 'Sejarah',
+    37: 'Seni Rupa',
+    38: 'Sosiologi',
+    39: 'Teknik Biomedik',
+    40: 'Teknik Elektro',
+    41: 'Teknik Elektronika',
+    42: 'Teknik Industri',
+    43: 'Teknik Informatika',
+    44: 'Teknik Kimia',
+    45: 'Teknik Komputer',
+    46: 'Teknik Lingkungan',
+    47: 'Teknik Mesin',
+    48: 'Teknik Sipil',
+    49: 'Teknologi Informasi'
 }
 
 R_features = ['R1', 'R2', 'R4', 'R6', 'R7', 'R8']
@@ -38,7 +87,7 @@ def predict():
             # Ensure all required features are in the input data
             required_features = R_features + I_features + A_features + S_features + E_features + C_features + [
                 'TIPI1', 'TIPI2', 'TIPI3', 'TIPI4', 'TIPI5', 'TIPI6', 'TIPI7', 'TIPI8', 'TIPI9', 'TIPI10',
-                'VCL1', 'VCL2', 'VCL3', 'VCL4', 'VCL5', 'VCL6', 'VCL7', 'VCL8', 'VCL9', 'VCL10', 'VCL11', 'VCL12', 'VCL13', 'VCL14', 'VCL15',
+                'VCL1', 'VCL2', 'VCL3', 'VCL4', 'VCL5', 'VCL6', 'VCL10', 'VCL11', 'VCL12', 'VCL13', 'VCL14', 'VCL15',
                 'education', 'gender', 'engnat', 'religion', 'voted'
             ]
 
@@ -66,7 +115,7 @@ def predict():
             # Select the final 37 features
             final_features = ['R', 'I', 'A', 'S', 'E', 'C'] + [
                 'TIPI1', 'TIPI2', 'TIPI3', 'TIPI4', 'TIPI5', 'TIPI6', 'TIPI7', 'TIPI8', 'TIPI9', 'TIPI10',
-                'VCL1', 'VCL2', 'VCL3', 'VCL4', 'VCL5', 'VCL6', 'VCL7', 'VCL8', 'VCL9', 'VCL10', 'VCL11', 'VCL12', 'VCL13', 'VCL14', 'VCL15',
+                'VCL1', 'VCL2', 'VCL3', 'VCL4', 'VCL5', 'VCL6', 'VCL10', 'VCL11', 'VCL12', 'VCL13', 'VCL14', 'VCL15',
                 'education', 'gender', 'engnat', 'religion', 'voted'
             ]
             input_data = df[final_features].values
