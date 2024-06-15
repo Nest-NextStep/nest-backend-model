@@ -16,7 +16,7 @@ I_features = ['I1', 'I2', 'I4', 'I5', 'I7', 'I8']
 A_features = ['A2', 'A3', 'A4', 'A5', 'A6', 'A8']
 S_features = ['S1', 'S3', 'S5', 'S6', 'S7', 'S8']
 E_features = ['E1', 'E3', 'E4', 'E5', 'E7', 'E8']
-C_features = ['C2', 'C3', 'C5', 'C6', 'C7', 'C8']
+C_features = ['C1','C2', 'C3', 'C5', 'C7', 'C8']
 
 
 @app.route("/")
@@ -82,7 +82,7 @@ def predict():
                     "code": 200,
                     "message": "Prediction successful"
                 },
-                "prediction": y_pred_labels
+            "prediction": y_pred_labels
             })
         except Exception as e:
             return jsonify({

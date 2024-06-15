@@ -1,7 +1,7 @@
 import requests
 
 # Define the URL of your Flask app
-url = "https://nest-backend-model-yo7utis4aa-et.a.run.app/predict"
+url = " http://127.0.0.1:5000/predict"
 
 # Define the JSON data to send
 data = {
@@ -14,7 +14,7 @@ data = {
     "TIPI1": 1, "TIPI2": 2, "TIPI3": 3, "TIPI4": 4, "TIPI5": 5,
     "TIPI6": 6, "TIPI7": 7, "TIPI8": 4, "TIPI9": 4, "TIPI10": 6,
     "VCL1": 1, "VCL2": 1, "VCL3": 0, "VCL4": 1, "VCL5": 0,
-    "VCL6": 1, "VCL7": 0, "VCL8": 0, "VCL9": 0, "VCL10": 0, "VCL11": 1, "VCL12": 1, "VCL13": 1,
+    "VCL6": 1, "VCL10": 0, "VCL11": 1, "VCL12": 1, "VCL13": 1,
     "VCL14": 1, "VCL15": 1, "education": 1, "gender": 0,
     "engnat": 0, "religion": 3, "voted": 1
 }
