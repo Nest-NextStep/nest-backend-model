@@ -8,7 +8,6 @@ import joblib
 app = Flask(__name__)
 model = load_model("my_model2.h5", compile=False)
 scaler = joblib.load('scaler.joblib')
-
 # Labels
 labels = {
     0: 'Administrasi Bisnis',
