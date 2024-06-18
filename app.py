@@ -9,6 +9,7 @@ app = Flask(__name__)
 model = load_model("my_model2.h5", compile=False)
 scaler = joblib.load('scaler.joblib')
 
+# Labels
 labels = {
     0: 'Administrasi Bisnis',
     1: 'Akuntansi',
@@ -69,10 +70,8 @@ A_features = ['A2', 'A3', 'A4', 'A5', 'A6', 'A8']
 S_features = ['S1', 'S3', 'S5', 'S6', 'S7', 'S8']
 E_features = ['E1', 'E3', 'E4', 'E5', 'E7', 'E8']
 C_features = ['C2', 'C3', 'C5','C6', 'C7', 'C8']
-TIPI_features = ['TIPI1', 'TIPI2', 'TIPI3', 'TIPI4',
-                 'TIPI5', 'TIPI6', 'TIPI7', 'TIPI8', 'TIPI9', 'TIPI10']
-VCL_features = ['VCL1', 'VCL2', 'VCL3', 'VCL4', 'VCL5', 'VCL6',
-                'VCL10', 'VCL11', 'VCL12', 'VCL13', 'VCL14', 'VCL15']
+TIPI_features = ['TIPI1', 'TIPI2', 'TIPI3', 'TIPI4', 'TIPI5', 'TIPI6', 'TIPI7', 'TIPI8', 'TIPI9', 'TIPI10']
+VCL_features = ['VCL1', 'VCL2', 'VCL3', 'VCL4', 'VCL5', 'VCL6','VCL10', 'VCL11', 'VCL12', 'VCL13', 'VCL14', 'VCL15']
 
 
 
